@@ -38,7 +38,7 @@ router.post('/:id/edit', function (req, res, next){
                                       power: req.body.power,
                                       nemesis: req.body.nemesis
                                     }, function (err, hero){
-  res.redirect('superheroes/' + req.params.id)
+  res.redirect('/superheroes/' + req.params.id)
   })
 })
 
