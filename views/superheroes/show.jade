@@ -1,0 +1,11 @@
+extends ../layout
+
+block content
+  h1= title
+  section
+    h2= superhero.name
+    h4= superhero.power
+    h4= superhero.nemesis
+  section
+    a(href='/superheroes/' + superhero._id + '/edit') Edit Hero
+    a(href='/superheroes') Full List

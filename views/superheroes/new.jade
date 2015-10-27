@@ -1,0 +1,21 @@
+extends ../layout
+
+block content
+  h1= title
+  form.form-horizontal(action='/superheroes/new', method='POST')
+    .form-group
+      label.col-sm-2.label-control(for='name') Name:
+      .col-sm-10
+        input#name.form-control(type='text' name='name' placeholder='Name' onfocus="this.placeholder = ''" onblur="this.placeholder = 'Name'" required)
+    .form-group
+      label.col-sm-2.label-control(for='power') Power:
+      .col-sm-10
+        input#power.form-control(type='text' name='power' placeholder='Power' onfocus="this.placeholder = ''" onblur="this.placeholder = 'Power'" required)
+    .form-group
+      label.col-sm-2.label-control(for='nemesis') Nemesis:
+      .col-sm-10
+        input#nemesis.form-control(type='text' name='nemesis' placeholder='Nemesis' onfocus="this.placeholder= ''" onblur="this.placeholder = 'Nemesis'" required)
+    .form-group
+      .col-sm-offset-2.col-sm-9
+        button.btn.btn-primary(type='submit') Add Hero
+        a(style="margin-left: 15px;" href='/superheroes') Cancel

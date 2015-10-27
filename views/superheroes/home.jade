@@ -1,0 +1,18 @@
+extends ../layout
+
+block content
+  h1= title
+  table
+    thead
+      th Name
+      th Power
+      th Nemesis
+    tbody
+      for hero in allHeroes
+        tr
+          td
+            a(href='/superheroes/' + hero._id)= hero.name
+          td= hero.power
+          td= hero.nemesis
+  section
+    a(href='/superheroes/new') Add a Superhero
